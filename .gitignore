@@ -1,0 +1,4 @@
+vendor
+.glide
+.idea
+**/*.swp
