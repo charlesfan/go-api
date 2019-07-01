@@ -1,14 +1,14 @@
 # go-api
 
 ## Install
-* Install glide(https://github.com/Masterminds/glide)
+* Install dep(https://github.com/golang/dep)
 * Clone project
 ```
 $ git clone https://github.com/charlesfan/go-api.git
 ```
-* Use glide to get all packages
+* Use dep to get all packages
 ```
-$ cd $PATH/go-api && glide i
+$ cd $PATH/go-api && dep ensure
 ```
 * Run server
 ```
