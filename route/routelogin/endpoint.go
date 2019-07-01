@@ -26,7 +26,7 @@ func EmailLogin(c *gin.Context) {
 	}
 
 	responseData := map[string]interface{}{
-		"mgs": "success",
+		"msg": "success",
 	}
 	c.JSON(http.StatusOK, responseData)
 }
