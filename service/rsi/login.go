@@ -1,6 +1,7 @@
 package rsi
 
 import (
+	"github.com/charlesfan/go-api/repository/user"
 	"github.com/charlesfan/go-api/utils/log"
 )
 
@@ -11,11 +12,11 @@ type EmailLoginBody struct {
 
 type loginService struct {
 	// ---Repository---
-	//user user.Repository
+	user user.Repository
 	// ---Other---
 }
 
-func (*loginService) EmailChecking(b *EmailLoginBody) error {
+func (s *loginService) EmailChecking(b *EmailLoginBody) error {
 	log.Info("Here in EmailChecking function: ")
 	log.Info("Got Email: ", b.Email)
 	log.Info("PASSWORD: ", b.Password)
@@ -23,8 +24,9 @@ func (*loginService) EmailChecking(b *EmailLoginBody) error {
 	return nil
 }
 
-func NewLoginService() LoginServicer {
-	s := &loginService{}
-
+func NewLoginService(u user.Repository) LoginServicer {
+	s := &loginService{
+		user: u,
+	}
 	return s
 }
