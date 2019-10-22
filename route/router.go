@@ -3,7 +3,7 @@ package route
 import (
 	"github.com/gin-gonic/gin"
 
-	"github.com/charlesfan/go-api/route/routelogin"
+	"github.com/charlesfan/go-api/route/login"
 )
 
 func Init() *gin.Engine {

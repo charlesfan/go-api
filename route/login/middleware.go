@@ -1,4 +1,4 @@
-package routelogin
+package login
 
 import (
 	"github.com/gin-gonic/gin"
