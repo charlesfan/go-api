@@ -14,7 +14,7 @@ func Init() *gin.Engine {
 	v1 := r.Group("/v1")
 	{
 		//Login
-		routelogin.MakeHandler(v1)
+		login.MakeHandler(v1)
 	}
 
 	return r
