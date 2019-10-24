@@ -5,6 +5,7 @@ import (
 
 	"github.com/jinzhu/gorm"
 
+	"github.com/charlesfan/go-api/grpc"
 	"github.com/charlesfan/go-api/repository"
 	"github.com/charlesfan/go-api/repository/sqlite"
 	"github.com/charlesfan/go-api/route"
@@ -30,9 +31,11 @@ func main() {
 
 	// rsi.Services init
 	rsi.Init(database)
+	// Rest api init
 	router := route.Init()
-
-	router.Run(":8080")
+	go router.Run(":8080")
+	// gRPC
+	grpc.Run(":50051")
 }
 
 func newDatabase(s, host string, m bool) *repository.Database {
