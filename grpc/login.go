@@ -1,9 +1,9 @@
 package grpc
 
 import (
+	"github.com/charlesfan/go-grpc/pb"
 	"golang.org/x/net/context"
 
-	"github.com/charlesfan/go-api/pb"
 	"github.com/charlesfan/go-api/service/rsi"
 )
 

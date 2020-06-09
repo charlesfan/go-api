@@ -5,10 +5,9 @@ import (
 	"log"
 	"net"
 
+	"github.com/charlesfan/go-grpc/pb"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
-
-	"github.com/charlesfan/go-api/pb"
 )
 
 const Protocol string = "tcp"
